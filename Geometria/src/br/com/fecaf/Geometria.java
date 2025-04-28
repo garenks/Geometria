@@ -3,6 +3,7 @@ package br.com.fecaf;
 
 import br.com.fecaf.model.Circulo;
 import br.com.fecaf.model.Retangulo;
+import br.com.fecaf.model.Triangulo;
 
 public class Geometria {
     public static void main(String[] args) {
@@ -54,6 +55,24 @@ public class Geometria {
         circulo2.calcularArea();
         circulo2.calcularDiamentro();
         circulo2.calcularPerimetro();
+
+        //Instanciando o objeto Triângulo
+        Triangulo triangulo1 = new Triangulo();
+
+        triangulo1.nome = "triângulo - 1";
+        triangulo1.base = 5;
+        triangulo1.ladoB = 3;
+        triangulo1.ladoC = 3;
+        triangulo1.altura = 8;
+
+        boolean validaTriangulo = triangulo1.validarTriangulo();
+
+        if (validaTriangulo) {
+            triangulo1.calcularArea();
+            triangulo1.exibirInformacoe();
+            triangulo1.calcularPerimetro();
+        }
+
     }
 
 
