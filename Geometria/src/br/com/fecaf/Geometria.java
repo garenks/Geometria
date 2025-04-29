@@ -60,9 +60,9 @@ public class Geometria {
         Triangulo triangulo1 = new Triangulo();
 
         triangulo1.nome = "triângulo - 1";
-        triangulo1.base = 5;
-        triangulo1.ladoB = 3;
-        triangulo1.ladoC = 3;
+        triangulo1.base = 12;
+        triangulo1.ladoB = 9;
+        triangulo1.ladoC = 15;
         triangulo1.altura = 8;
 
         boolean validaTriangulo = triangulo1.validarTriangulo();
@@ -71,7 +71,10 @@ public class Geometria {
             triangulo1.calcularArea();
             triangulo1.exibirInformacoe();
             triangulo1.calcularPerimetro();
+            triangulo1.definirTipoTriangulo();
+            triangulo1.definirTrianguloRetangulo();
         }
+
 
     }
 
