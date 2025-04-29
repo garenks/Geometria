@@ -1,5 +1,7 @@
 package br.com.fecaf.model;
 
+import java.util.Arrays;
+
 public class Triangulo {
 
     public double base;
@@ -48,4 +50,43 @@ public class Triangulo {
         System.out.println("/______________________________/");
     }
 
+    public void definirTipoTriangulo(){
+        if (base == ladoB && base == ladoC && ladoB == ladoC) {
+            System.out.println("/______________________________/");
+            System.out.println("Esse Triângulo é Equilátero...");
+            System.out.println("/______________________________/");
+        }else if (base == ladoB || base == ladoC || ladoB == ladoC){
+            System.out.println("/______________________________/");
+            System.out.println("Esse Triângulo é Isósceles...");
+            System.out.println("/______________________________/");
+        }else {
+            System.out.println("/______________________________/");
+            System.out.println("Esse Triângulo é Escaleno...");
+            System.out.println("/______________________________/");
+        }
+    }
+
+    public void definirTrianguloRetangulo () {
+
+        // c² + c² = h²
+
+        double [] ladosTriangulo = {base, ladoB, ladoC};
+
+        Arrays.sort(ladosTriangulo);
+
+        double cateto1 = ladosTriangulo[0];
+        double cateto2 = ladosTriangulo[1];
+        double hipotenusa = ladosTriangulo[2];
+
+        if (Math.pow(cateto1, 2) + Math.pow(cateto2, 2) == Math.pow(hipotenusa, 2)) {
+            System.out.println("/______________________________/");
+            System.out.println("Esse Triângulo é Triângulo Retângulo...");
+            System.out.println("/______________________________/");
+        }else{
+            System.out.println("/______________________________/");
+            System.out.println("Esse Triângulo não é um Triângulo Retângulo...");
+            System.out.println("/______________________________/");
+        }
+
+    }
 }
